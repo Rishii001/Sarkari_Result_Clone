@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>
+            Sarkari Result
+        </title>
+        <link rel="icon" href="sk.png">
+        <style>
+            *
+            {
+                box-sizing: border-box;
+                font-family: arial;
+            }
+            a
+            {
+                text-decoration: none;
+
+            }
+            .border
+            {
+                height: 6900px;
+                width: 1002px;
+                border: 1px solid #fff;
+                margin: 0px auto;
+            }
+            .header
+            {
+                height: 180px;
+                width: 1000px;
+                background: #ab183D;
+            }
+            .logo
+            {
+                height: 180px;
+                width: 180px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                float: left;
+            }
+            .title
+            {
+                height: 180px;
+                width: 820px;
+                float: right;
+                text-align: center;
+                color: #fff;
+            }
+            .title .heading
+            {
+                padding-top: 40px;
+                font-size: 42px;
+                font-weight: 700;
+                margin: 0;
+            }
+            .title .sub_heading
+            {
+                font-weight: 700;
+                margin: 0;
+                padding: 0;
+            }
+           .navbar
+           {
+            height: 50px;
+            width: 1000px;
+            background: #000;
+            line-height: 50px;
+        
+           }
+           .navbar ul
+           {
+            margin: 0;
+            padding: 0;
+           }
+           .navbar ul li
+           {
+            list-style: none;
+            display: inline-block;
+            height: 50px;
+            width: 121px;
+            text-align: center;
+            border-right: 1px solid #fff;
+           }
+           .navbar ul li a
+           {
+            color: #fff;
+            font-weight: bold;
+           }
+           .latest_news
+           {
+            height: 25px;
+            width: 1000px;
+            text-align: center;
+            line-height: 35px;
+         }
+           .latest_news a
+           {
+            font-weight: bold;
+            color:#004b91;
+           }
+           .join_us
+           {
+            height: 50px;
+            width: 1000px;
+            text-align: center;
+            line-height: 50px;
+            margin-top: 0%;
+        }
+        .join_us a
+        {
+            background: #0000a0;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px; 
+        }
+        .online
+        {
+            height: 60px;
+            width: 1000px;
+            //background: red;
+        }
+        .box
+        {
+            height: 56px;
+            width: 246px;
+            //background: orange;
+            margin: 2px;
+            float: left;
+            text-align: center;
+            font-size: 20px;
+        }
+        .online .box a
+        {
+          font-weight: bold;
+          color: #fff;
+        }
+        .container
+        {
+            min-height: 225px;
+            height: 900px;
+            width: 1000px;
+           // background: white;
+        }
+       .card
+       {
+        min-height: 250px;
+        height: 920px;
+        width: 300px;
+        border: 2px solid #d2691e;
+        float: left;
+        margin: 15px; 
+       }
+       .card-ad
+       {
+        min-height: 250px;
+        height: 750px;
+        width: 300px;
+        border: 2px solid #d2691e;
+        float: left;
+        margin: 15px; 
+       }
+       .card-c
+       {
+        min-height: 250px;
+        height: 360px;
+        width: 300px;
+        border: 2px solid #d2691e;
+        float: left;
+        margin: 15px; 
+    
+       }
+       .card-c ul li
+       {
+         text-decoration: underline;
+       }
+       .card-b
+       {
+        min-height: 200px;
+        height: auto;
+        width: 300px;
+        border: 2px solid #d2691e;
+        float: left;
+        margin: 15px;
+        margin-top: -374px;
+       }
+       .card-header
+       {
+        height:40px;
+        width: 100%;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 22px;
+        background: #ab183d;
+    }
+    .card-body
+    {
+        height: 800px;
+        width: 100%;
+    }
+    .card-body-a
+    {
+        height: 500px;
+        width: 100%;
+    }
+    .card-body ul li a
+    {
+       height:30px ;
+       text-decoration: underline;
+    }
+    .card-body-a ul li
+    {
+       height:35px ;
+       text-decoration: underline;
+    }
+   .card-body-b
+    {
+        height: auto;
+        width: 100%; 
+    }
+    .card-body-b ul li 
+    {
+        text-decoration: underline;
+    }
+    .boxes
+       {
+        min-height: 250px;
+        height: auto;
+        width: 800px;
+        border: 2px solid #d2691e;
+        float: center;
+        margin: 15px;
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+       }
+       
+    .boxes-header
+       {
+        height: auto;
+        width: 100%;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 24px;
+        background: #ab183d;
+        margin-top: 10px;
+    }
+    .boxes-body
+    {
+        height: auto;
+        width: 100%;
+    }
+    p{
+        margin-left: 8px;
+        margin-right: 5px;
+        padding: 15px;
+        font-size: 18px;
+        text-align: center;
+    }
+    .boxes-body ul li
+    {
+      font-size: 18px;
+      padding: 2px;
+    }
+    .contain
+        {
+            min-height: 500px;
+            height: auto;
+            width: auto;
+           // background: white;
+        }
+       .menu
+       {
+        min-height: 250px;
+        height: auto;
+        width: auto;
+        float: left;
+        margin: 25px;
+        margin-left: 100px;
+     }
+       .menu-b
+       {
+        min-height: 250px;
+        height: auto;
+        width: auto;
+        float: left;
+        margin: 5px;
+        margin-top: 25px;
+     }
+       .menu-header
+       {
+        height:40px;
+        width: 100%;
+        text-align: left;
+        line-height: 40px;
+        color: #fff;
+        font-weight: bold;
+        font-size: 25px;
+        color: #000;
+        margin-left: 39px;
+    }
+    .menu-body
+    {
+        height: auto;
+        width: 100%;
+        color: #000;
+        padding: 10px;
+        margin-left: 30px;
+        font-size: small;
+    }
+    .menu-body section a
+    {
+        color: rgba(0,0,0,0.75);
+        font-size: 14px;
+        text-decoration: none;
+    }
+     
+        </style>
+    </head>
+    <body>
+       <div class="border">
+        <div class="header">
+            <div class="logo">
+                <img src="sk.png" alt="">
+            </div>
+            <div class="title">
+                <p class="heading">SARKARI RESULT</p>
+                <p class="sub_heading">WWW.SARKARIRESULT.COM</p>
+            </div>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="https://www.sarkariresult.com/" target="_blank">Home</a></li>
+                <li><a href="https://www.sarkariresult.com/latestjob/" target="_blank">Latest Jobs</a></li>
+                <li><a href="https://www.sarkariresult.com/result/" target="_blank">Result</a></li>
+                <li><a href="https://www.sarkariresult.com/admitcard/" target="_blank">Admit Card</a></li>
+                <li><a href="https://www.sarkariresult.com/answerkey/" target="_blank">Answer Key</a></li>
+                <li><a href="https://www.sarkariresult.com/syllabus/" target="_blank">Syllabus</a></li>
+                <li><a href="https://www.sarkariresult.com/search/" target="_blank">Search</a></li>
+                <li><a href="https://www.sarkariresult.com/contactus/" target="_blank">Contact Us</a></li>
+            </ul>
+            </div>
+            
+           
+           <br><h3 align="center">Sarkari Result : SarkariResult.Com Sarkari Naukri Latest Jobs Online Form at Sarkari Results 2024</h3>
+         <h4 style="text-align:center; color: #ff0000;">Welcome to No. 1 Education Portal Sarkari Result 2024</h4>
+            <div class="latest_news">
+            <a href="https://play.google.com/store/apps/details?id=com.app.app14f269771c01" target="_blank">Sarkari Result Android Apps</a> ||
+            <a href="https://www.youtube.com/c/SarkariResultOfficial" target="_blank">Sarkari Result Youtube Channel</a> ||
+            <a href="https://apps.apple.com/us/app/sarkari-result/id1051363935?ls=1" target="_blank">Sarkari Result Apple / IOS Apps</a> ||
+            <a href="https://www.instagram.com/sarkariresult.comofficial/" target="_blank">Follow Instagram</a> 
+         </div>
+         <div class="latest_news">
+            <marquee behavior="alternate" onmouseover="this.stop();" onmouseleave="this.start();">
+            <a href="https://www.sarkariresult.com/2024/nta-csir-net-june2024/" target="_blank">NTA CSIR NET Online Form 2024</a> ||
+            <a href="https://www.sarkariresult.com/nta/neet-ug-2024/" target="_blank">NTA NEET UG Admit Card 2024 </a> ||
+            <a href="https://www.sarkariresult.com/2024/up-cnet-2024/" target="_blank"> UP CNET Online Form 2024</a></marquee>
+         </div>
+         <div class="latest_news">
+            <marquee behavior="alternate" onmouseover="this.stop();" onmouseleave="this.start();">
+            <a href="https://www.sarkariresult.com/2024/cisce-2024/" target="_blank">ICSE Class 10th Result 2024</a>||
+            <a href="https://www.sarkariresult.com/2024/cisce-2024/" target="_blank"> ISC Board 12th Result 2024</a>||
+            <a href="https://www.sarkariresult.com/2024/nta-cuet-ug-2024/" target="_blank">NTA CUET UG Exam City and Date 2024</a>
+            </marquee></div>
+            <div class="latest_news">
+            <marquee behavior="alternate" onmouseover="this.stop();" onmouseleave="this.start();">   
+            <a href="https://www.sarkariresult.com/2024/up-aganwadi-bharti-2024/" target="_blank">UP Aganwadi Bharti Online Form 2024 </a>||
+            <a href="https://www.sarkariresult.com/2024/duvasu-mathura-pvt/" target="_blank"> Mathura PVT Admissions Online Form 2024</a>||
+            <a href="https://www.sarkariresult.com/2024/jac-10th-result/" target="_blank">Jharkhand Board Matric Result 2024</a>
+          </marquee>
+        </div>
+    <center><p style="color: #fff; background-color: #000; border-radius: 18px; width: 20%;"><b>X </b><a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fwww.sarkariresult.com%2F&ref_src=twsrc%5Etfw%7Ctwcamp%5Ebuttonembed%7Ctwterm%5Efollow%7Ctwgr%5Esarkari_result&screen_name=sarkari_result" target="_blank" style="color: #fff; font-size: 14px"> Follow @Sarkari_Result</a></p></center>
+        <div class="join_us">
+            <a href="https://sarkariresult.tools/" target="_blank">SARKARI RESULT TOOLS</a>
+        </div>
+        <div class="online">
+            <div class="box" style="background: #868a08;"><a href="https://www.sarkariresult.com/railway/rpf-constable-si-cen-01-02-2024/" target="_blank">RPF Constable / SI apply online</a></div>
+            <div class="box" style="background: #0404b4;"><a href="https://www.sarkariresult.com/2024/nta-ugc-net-june2024/" target="_blank">UGC NET June 2024 Apply Online</a></div>
+            <div class="box" style="background: #FB5E03;"><a href="https://www.sarkariresult.com/teacher/bihar-bseb-stet-2024/" target="_blank">Bihar STET 2024 Admit Card</a></div>
+            <div class="box" style="background: #0404b4;"><a href="https://www.sarkariresult.com/upsc/upsc-cpf-ac-2024/" target="_blank">UPSC CAPF AC Apply Online</a></div>
+            <div class="box" style="background: #fb0303;"><a href="https://www.sarkariresult.com/force/navy-ssr-mr-02-2024/" target="_blank">NAVY SSR/MR Apply Online</a></div>
+            <div class="box" style="background: #0b610b;"><a href="https://www.sarkariresult.com/2024/nta-cuet-ug-2024/" target="_blank">CUET UG 2024 Admit Card</a></div>
+            <div class="box" style="background: #ff00bf;"><a href="https://www.sarkariresult.com/upsssc/upsssc-technical-asst-07-2024/" target="_blank">UPSSSC AGTA 2024 Apply Online</a></div>
+            <div class="box" style="background: #0080ff;"><a href="https://www.sarkariresult.com/2024/cbse-exam-2024/" target="_blank">CBSE 10th & 12th Result 2024</a></div>
+        </div>
+        <div class="container">
+            <div class="card">
+            <div class="card-header">
+             Result
+            </div>
+            <div class="card-body">
+                <ul>
+                    <li><a href="https://www.sarkariresult.com/delhi/dda-various-post-02-2023/" target="_blank">DDA Junior Engineer JE Civil 2023 Result</a><b style="font-size: 13px;"> Declared</b></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/2023/emrs-pgt-non-teaching-june23/" target="_blank">EMRS Teaching / Non Teaching Various Post Cutoff 2024</a></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/delhi/dsssb-latest-result/" target="_blank">DSSSB Senior Personal Assistant, Personal Asssistant Result 2024</a></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/ssc/ssc-cpo-si-2023/" target="_blank">SSC CPO SI 2023 Final Result with Marks</a></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/2024/cbse-exam-2024/" target="_blank">CBSE Board Class 12th Result 2024</a><b style="font-size: 13px;"> Declared</b></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/2024/cbse-exam-2024/" target="_blank">CBSE Board Class 10th Result 2024</a><b style="font-size: 13px;"> Declared</b></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/2024/bseh-hbse-10th-result/" target="_blank">Haryana Board Class 10th Result 2024</a></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/upsc/upsc-cds-first-2024/" target="_blank">UPSC CDA I Result 2024</a></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/upsc/upsc-nda-first-2024/" target="_blank">UPSC NDA I Result 2024</a><b style="font-size: 13px;"> Declared</b></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/2023/cgbse-result-2023/" target="_blank">Chattisgarh Board CGBSE Class 10th, 12th Result 2024</a></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/2024/nta-nift-admissions/" target="_blank">NTA NIFT Admission Stage II Result 2024</a></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/2024/aiims-norcet-6th/" target="_blank">AIIMS NORCET 6th Stage II Result 2024</a></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/upsc/upsc-ias-ifs-2023/" target="_blank">UPSC Forest Services 2023 Final Result</a></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/2024/wb-results-12th/" target="_blank">West Bengal Board Class !@th HS Result 2024</a></li>&nbsp;
+                    <li><a href="https://www.sarkariresult.com/2024/bseb-10th-result/" target="_blank">Bihar Board Class 10th matric Resvised Result 2024</a><b style="font-size: 13px;"> Declared</b></li>
+                    <h4 style="text-align: right; color: #ab183D; margin-right: 15px; margin-bottom: 20px;"><a href="https://www.sarkariresult.com/result/" target="_blank">View More</a></h4>
+                </ul>
+            </div>
+            </div>
+            <div class="container">
+                <div class="card">
+                <div class="card-header">
+                 Admit card
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><a href="https://www.sarkariresult.com/delhi/dsssb-admit-card-download/" target="_blank">DSSSB PA,SPA,JJA Stage II Exam Date 2024</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/2024/nta-cuet-ug-2024/" target="_blank">CUET UG 2024 Admit Card</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/teacher/bihar-bseb-stet-2024/" target="_blank">Bihar BSEB STET Admit Card 2024</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/2024/jeecup-2024/" target="_blank">UP Polytechnic JEECUP 2024 Exam Date</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/2024/cbse-various-post-mar24/" target="_blank">CBSE Various Post Exam Date 2024</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/upsssc/upsssc-forest-guard-06-exam-22/" target="_blank">UPSSSC Van Daroga 2022 Doument Verification Letter</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/delhi/delhi-hc-pa-spa-mar23/" target="_blank">Delhi High Court SPA Stage III Admit Card 2024</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/2021/ccc-admit-card/" target="_blank">NIELIT CCC Admit Card May 2024</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/2024/nta-cmat-2024/" target="_blank">NTA CMAT 2024 Admit Card</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/ssc/ssc-selection-post-12th-2024/" target="_blank">SSC Selection Post XII New Exam Date 2024</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/ssc/ssc-junior-engineer-2024/" target="_blank">SSC Junior Engineer JE 2024 Exam Date</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/ssc/ssc-cpo-si-2024/" target="_blank">SSC CPO SI 2024 Exam Date </a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/nta/neet-ug-2024/" target="_blank">NTA NEET UG 2024 Admit Card </a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/2024/nta-nchm-jee/" target="_blank">NTA NCHMJEE Admit Card 2024</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/2024/up-metro-various-mar24/" target="_blank">UP Metro Various Post Admit Card 2024</a></li>&nbsp;
+                        <li><a href="https://www.sarkariresult.com/2024/up-metro-various-mar24/" target="_blank">UP Metro Various Post Admit Card 2024</a></li>
+                        <h4 style="text-align: right; color: #ab183D; margin-right: 15px; margin-top: 65px;"><a href="https://www.sarkariresult.com/admitcard/" target=" blank">View More</a></h4>
+                    </ul>
+                </div>
+                </div>
+                <div class="container">
+                    <div class="card">
+                    <div class="card-header">
+                     Latest Jobs
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li><a href="https://www.sarkariresult.com/2024/nta-ugc-net-june2024/" target="_blank">NTA UGC NET june 2024 Online Form</a><b style="font-size: 13px;"> Extended</b></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/upsc/upsc-nda-ii-2024/" target="_blank">UPSC NDA II Online Form 2024</a></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/railway/rpf-constable-si-cen-01-02-2024/" target="_blank">Railway RPF Constable / SI Correction / Efit Form 2024</a></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/force/army-tes-52/" target="_blank">Army 10+2 TES 52 Online Form 2024</a></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/force/navy-ssr-mr-02-2024/" target="_blank">Indian NAVY Agniveer SSR / MR Online Form 02/2024</a></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/ssc/ssc-chsl-2024/" target="_blank">SSC CHSL 10+2 Correction / Edit Form 2024</a></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/force/airforce-group-y-01-2025/" target="_blank">Air Force Medical Assistant Group Y Online Form 2024</a></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/bihar/bgsys-it-assistant-may24/" target="_blank">Bihar BGSYS Lekhpal IT Assistant Online Form 2024</a></b></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/bank/ippb-it-executive-may24/" target="_blank">India Post Payment Bank IT Executive Online Form 2024</a></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/2024/nvs-non-teaching-mar24/" target="_blank">NVS Non Teaching Various Post Online Form 2024</a><b style="font-size: 13px;"> Extended</b></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/upsssc/upsssc-je-08-exam-2024/" target="_blank">UPSSSC junior Engineer JE Online Form 2024</a></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/2024/iit-jodhpur-non-teaching/" target="_blank">IIT Jodhpur Non Teaching Various Post Online Form 2024</a></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/2024/upsifs-lucknow-may24/" target="_blank">UPSIFS Lucknow Teaching / Non Teaching Various Post Online Form</a></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/2024/nta-csir-net-june2024/" target="_blank">NTA CSIR UGC NEt Online Form 2024</a></li>&nbsp;
+                            <li><a href="https://www.sarkariresult.com/upsssc/upsssc-technical-asst-07-2024/" target="_blank">UPSSSC Technical Assistant Group C Online Form 2024</a><b style="font-size: 13px;"> Extended</b></li>
+                            <h4 style="text-align: right; color: #ab183D; margin-right: 15px; margin-top: 10px;"><a href="https://www.sarkariresult.com/latestjobs/" target=" blank">View More</a></h4>
+                        </ul>
+                    </div>
+                    </div>
+                    <div class="container">
+                        <div class="card-c">
+                        <div class="card-header">
+                         Answer Key
+                        </div>
+                        <div class="card-body-c">
+                            <ul>
+                                <li><a href="https://www.sarkariresult.com/teacher/bihar-special-tet-dec23/" target="_blank">Bihar BSSTET 2023 Answer Key</a></li>&nbsp;
+                                <li><a href="https://www.sarkariresult.com/bihar/bpsc-agriculture-advt-18-21-2024/" target="_blank">BPSC Agriculture Various Post OMR Sheet 2024</a></li>&nbsp;
+                                <li><a href="https://www.sarkariresult.com/2024/nta-jeemain-april24/" target="_blank">NTA JEMAIN April 2024 Answer Key</a></li>&nbsp;
+                                <li><a href="https://www.sarkariresult.com/delhi/dsssb-admit-card-download/" target="_blank">DSSSB March 2024 Exam Answer Key</a></li>&nbsp;
+                                <li><a href="https://www.sarkariresult.com/2024/nta-cuet-pg-2024/" target="_blank">NTA CUET PG 2024 Answer Key</a></li>&nbsp;
+                                <h4 style="text-align: right; color: #ab183D; margin-right: 15px; margin-bottom: 15px;"><a href="https://www.sarkariresult.com/answerkey/" target=" blank">View More</a></h4>
+                               
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="container">
+                            <div class="card-c">
+                            <div class="card-header">
+                             Syllabus
+                            </div>
+                            <div class="card-body">
+                                <ul>
+                                    <li><a href="https://www.sarkariresult.com/2023/up-police-constable-dec23/" target="_blank">UP Police Constable Syllabus 2024</a></li>&nbsp;
+                                    <li><a href="https://www.sarkariresult.com/2024/up-police-computer-programmer/" target="_blank">Up police Computer Operator, Programmer Syllabus 2024</a></li>&nbsp;
+                                    <li><a href="https://www.sarkariresult.com/2024/up-police-si-asi-jan24/" target="_blank">UP Polioce SI/ ASI Syllabus 2024</a></li>&nbsp;
+                                    <li><a href="https://www.sarkariresult.com/upsssc/upsssc-syllabus-pdf/" target="_blank">UPSSSC Stenographer Syllabus 2023</a></li>&nbsp;
+                                    <li><a href="https://www.sarkariresult.com/upsssc/upsssc-syllabus-pdf/" target="_blank">UPSSSC Forest Guard 2023 Syllabus</a></li>
+                                    <h4 style="text-align: right; color: #ab183D; margin-right: 15px; margin-top: 40px;"><a href="https://www.sarkariresult.com/Syllabus/" target=" blank">View More</a></h4>
+                                </ul>
+                            </div>
+                            </div>
+                            <div class="container">
+                                <div class="card-ad">
+                                <div class="card-header">
+                                 Admission
+                                </div>
+                                <div class="card-body-a">
+                                    <ul>
+                                        <li><a href="https://www.sarkariresult.com/2024/jeecup-2024/" target="_blank">UP polytechnic JEECUP 2024 Correction / Edit Form </a></li>&nbsp;
+                                        <li><a href="https://www.sarkariresult.com/2024/up-cpet-2024/" target="_blank">UP CPET 2024 Online Form</a></li>&nbsp;
+                                        <li><a href="https://www.sarkariresult.com/2024/upmsp-improvement/" target="_blank">UP board Improvement / Compartment Exam Online Form  2024 </a></li>&nbsp;
+                                        <li><a href="https://www.sarkariresult.com/2024/upsifs-admissions/" target="_blank">UPSIFS Lucknow UG, PG,Phd Admissions Online Form 2024</a></li>&nbsp;
+                                        <li><a href="https://www.sarkariresult.com/2024/upmsp-scrutiny-form/" target="_blank">UP Board Class 10th,12th Scrutiny Online Form 2024</a></li>&nbsp;
+                                        <li><a href="https://www.sarkariresult.com/2024/muit-admissions-2024/" target="_blank">MUIT Lucknow, Noida Direct Admission 2024</a></li>&nbsp;
+                                        <li><a href="https://www.sarkariresult.com/2024/prsu-cet-2024/" target="_blank">Rajju Bhaiya University PRSU CET Admissions Online Form 2024</a></li>&nbsp;
+                                        <li><a href="https://www.sarkariresult.com/2024/bihar-2yr-bed-cet/" target="_blank">Bihar 2 Year BED CET Online Form 2024</a></li>&nbsp;
+                                        <li><a href="https://www.sarkariresult.com/2024/lucknow-univ-admissions/" target="_blank">Lucknow University Admissions Online Form 2024</a></li>&nbsp;
+                                        <li><a href="https://www.sarkariresult.com/2024/iert-admissions/" target="_blank">IERT Admissions 2024 Online Form 2024</a></li>&nbsp;
+                                        <li><a href="https://www.sarkariresult.com/2024/up-cnet-2024/" target="_blank">UP Common Nursing Admissin Test UP CNET Online Form 2024</a></li>&nbsp;
+                                        <li><a href="https://www.sarkariresult.com/mp/mp-pat-2024/" target="_blank">MP Pre Agriculture Test MPPAT Online Form 2024</a></li>&nbsp;
+                                        <h4 style="text-align: right; color: #ab183D; margin-right: 15px; margin-top: 10px;"><a href="https://www.sarkariresult.com/admission/" target=" blank">View More</a></h4>
+                                    </ul>
+                                </div>
+                                </div>
+                                <div class="containerS">
+                                    <div class="card-b">
+                                    <div class="card-header">
+                                     Certificate Verification
+                                    </div>
+                                    <div class="card-body-b">
+                                        <ul>
+                                            <li><a href="https://www.sarkariresult.com/nta/nta-ugc-net-dec23/" target="_blank">NTA UGC NET December 2023 E Certificate</a></li>&nbsp;
+                                            <li><a href="https://www.sarkariresult.com/upsssc/upsssc-pet-2023/" target="_blank">UPSSSC PET 2023 Certificate</a></li>&nbsp;
+                                            <li><a href="https://www.sarkariresult.com/2024/voter-service-portal/" target="_blank">Voter ID Online Form 2024, E EPIC Download</a></li>&nbsp;
+                                            <li><a href="https://www.sarkariresult.com/2023/aadhar-pan-card-link/" target="_blank">Aadhar PAN Card Link Online or Check Status 2023</a></li>&nbsp;
+                                            <li><a href="https://www.sarkariresult.com/nta/ugc-net-june-2020/" target="_blank">NTA UGC NET June 2020 E Certificate</a></li>
+                                            <h4 style="text-align: right; color: #ab183D; margin-right: 15px; margin-bottom: 15px;"><a href="https://www.sarkariresult.com/certificateverification/" target=" blank">View More</a></h4>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="card-b">
+                                        <div class="card-header">
+                                         Important
+                                        </div>
+                                        <div class="card-body-b">
+                                            <ul>
+                                                <li><a href="https://www.sarkariresult.com/ssc/ssc-one-time-registration-otr/" target="_blank">SSC OTR Online Form 2024</a></li>&nbsp;
+                                                <li><a href="https://www.sarkariresult.com/2023/up-scholarship-2023/" target="_blank">UP Scholarship Online Form 2024</a></li>&nbsp;
+                                                <li><a href="https://www.sarkariresult.com/2023/sahara-refund-portal/" target="_blank">Sahara Refund Portal Online Registration 2023</a></li>&nbsp;
+                                                <li><a href="https://www.sarkariresult.com/2023/up-family-id/" target="_blank">UP Family I Ek Pariwar Ek Pahchan Online Registration 2023</a></li>&nbsp;
+                                                <li><a href="https://www.sarkariresult.com/mp/mp-esb-profile-registration/" target="_blank">MPESB Profile Online Rwgistration 2024</a></li>
+                                                <h4 style="text-align: right; color: #ab183D; margin-right: 15px; margin-top: 27px;"><a href="https://www.sarkariresult.com/important/" target=" blank">View More</a></h4>
+                                             </ul>
+                                        </div>
+                                </div>
+                              
+                            <a href="https://www.dmca.com/Protection/Status.aspx?ID=c81d92e5-9e14-4471-b080-8d86f5167345&refurl=https://www.sarkariresult.com/" target="_blank" style="margin-left: 130px;"><img src="DBMS.png" alt=""></a>       
+        <div class="contain">
+            <div class="boxes">
+                <div class="boxes-header">Sarkari Result : Resources to Help Indians Get Government Jobs (Sarkari Job)</div>
+                <div class="boxes-body">
+                   <p>The future is uncertain, but a government job, Sarkari Jobs can help you secure your future. Click for valuable resources and help from Sarkari Result.</p>
+
+
+                   <p>Did you know that over 1.5 million people lost their jobs in August 2021 in rural and urban India? Yes, the COVID-19 pandemic has hit the job market hard. Small businesses and multinationals alike have had to reconsider their staffing requirements.</p>
+                    
+                    <p>Are you an unemployed Indian citizen because of the pandemic and fluctuating job market?</p>
+                    
+                    <p>Are you working for a multinational company going through restructuring and considering your next steps?</p>
+                    
+                    <p>Are you a recent graduate looking to find your first job?</p>
+                    
+                    
+                    <p>Are you wondering if a government job is right for you?</p>
+                    
+                    
+                    <p>You've come to the right place! At Sarkari Result, we will show you the benefits of an Indian government job and help you to find a government job that's stable, long-term, and right for you!</p>
+
+               
+                </div>
+                <div class="boxes-header">Why Should I Consider a Government Job?</div>
+                <div class="boxes-body">
+            <br>
+                     <p> In India, a Sarkari Naukri (or an Indian government job) is highly sought-after. It's the ultimate career goal, offering long-term security, good benefits, and friendly co-workers.</p>
+
+                     <p>More than that, an Indian government job offers an opportunity to live a life of purpose.</p>
+  
+                     <p>It's a way for you to give back to your community.</h4>
+
+                     <p>According to the Centre for Monitoring Indian Economy Pvt. Ltd. (CMIE), the unemployment rate in India increased from 6.5% in November 2020 to 7.75% in October 2021. In this fluctuating market, there has been an increase in the demand for the stability and permanence offered by a Sarkari Naukri.</p>
+
+                     <p>In addition, government jobs in India can be pretty lucrative offering competitive salaries, benefits, and pensions. Some of the highest-paid jobs in the Indian government include the Indian Administrative Services (IAS), Indian Foreign Services (IFS), and Indian Police Services (IPS).</p>
+
+                     <p>Keep in mind that these jobs are also highly competitive with a complex application process!</p>
+                
+                    </div>
+                 <div class="boxes-header">What Kind of Government Jobs Can I Get?</div>
+                <div class="boxes-body">
+                   
+                   <p> There are a wide variety of government jobs in India. It depends on your interests, but a job in the Indian government can range from policy-making, public administration, military, law, engineering, and even teaching. Some of the more highly-paid and in-demand positions are discussed below to give you a sense of their requirements and salary expectations.</p>
+
+                    <p>1. Indian Administrative Services (IAS) and Indian Foreign Services (IFS) Jobs : The role of an IAS officer may include advising the ministers on various policy issues, implementing policies of the government, collecting revenue, and supervising public spending. An IFS officer manages foreign relations in India with more than 160 Indian Diplomatic Missions and International Organizations around the world. The starting monthly salary of an IAS or IFS officer is about INR 56,100.</p>
+                    
+                    
+                    <p>2. Indian Police Services (IPS) Jobs : A role with the IPS involves safeguarding the public, maintaining law and order, and detecting and preventing crime. The role can be with the various agencies and branches including the Research and Analysis Wing (R&AW), Intelligence Bureau (IB), Central Bureau of Investigation (CBI), and Criminal Investigation Department (CID). To be eligible for a job with IPS, there are additional requirements, including physical standards. Physical eligibility includes minimum height for men and women, minimum chest girth for men and women, restriction on vision impairments including myopia limited to less than -4.00, and hyper myopia not exceeding +4.00. According to Payscale, an entry-level police constable with less than 1-year experience can earn an average total compensation of INR 255,094. This includes tips, bonuses, and overtime pay.</p>
+                    
+                   <p> 3. Banking Jobs :The banking sector is one of the fastest-growing sectors in India. It's not surprising that jobs in government-approved banks such as the State Bank of India (SBI), Allahabad Bank, HDFC, and ICICI are highly sought after. A job in the banking sector could either be a clerical position such as typists, data entry operators, cashiers, or clerks or a probationary officer (PO) role. As a PO, the candidate will be under probation during the training period and will be hired following the probation based on performance. During the training period, the candidate will be trained in accounting, finance, billing, investment, and revenue collection. A PO role allows opportunities for career growth to middle and senior management based on performance and additional examinations. The starting monthly salary of a PO is about INR 57,000 including allowances.</p>
+                    
+                   <p> 4. Defence Jobs : Jobs with the National Defence Academy (NDA) can be in various departments, such as Army, Navy, Air Force, Coast Guard, etc. A job in the NDA comes with strict restrictions on age, physical, and vision standards. Cadet trainees receive a stipend of INR 56,100 per month. Allowances and promotions will increase this salary. There are also several agricultural, engineering, and research jobs with their own set of rules and requirements. These can get very complicated, but Sarkari Result does all the work for you and lists the various jobs ranging from a Rajasthani police constable to Allahabad High Court Review Officer. Each job posting contains all the details you would need to be able to apply for the position with ease.  </p>
+                </div>
+                <div class="boxes-header">With All the Competition, How Can I Get a Job Working in the Government?</div>
+                <div class="boxes-body">
+                   <p>It's not easy to stand out in the face of this competition. But by following these four steps and with the right resources at your disposal, getting that Indian government job will no longer be a mere dream.</h4>
+                   <h4 style="margin-left: 25px;">     Step 1: Research the Job Requirements at Sarkari Result </h4>
+                    <p>The first step to getting an Indian government job is knowing what you are applying to. To get a job in the Indian government, you need to meet several eligibility requirements, keep note of important deadlines, pay fees associated with the job application and complete the competitive examination.
+                   </p>
+                <p>Before you end up rushing around, spend some time going through these requirements and understanding them. Rather than going to several different websites and getting lost in the mix, Sarkari Result provides a<a href="https://www.sarkariresult.com/latestjob/" target="_blank"><u> one-page summary that shows:</u></a></p>
+                  <ul>
+                    <li>Number of Vacancies</li>
+                    <li>Important Dates</li>
+                    <li>Application Fee</li>
+                    <li>Education Eligibility</li>
+                    <li>Age Limit</li>
+                    <li>Exam Notice</li>
+                    <li>Online Admission Link</li>
+                  </ul>
+                  <p>This one-page summary is a good way to get all of the information in a single easy-to-read format. It's the best resource to help get you from Step 1 through to Step 4, all the way to the perfect government job in India.</p>
+
+                  <strong style="margin-left: 15px;">Eligibility Requirements</strong>
+                  <p>Unlike most private company jobs, government jobs in India need more than good interview skills. The eligibility requirements can vary for every job, and includes restrictions on the candidate's age, educational qualifications, nationality, experience, marital status, gender, etc.</p>
+
+                    <p>A job with the IAS/IFS posted in 2021 on Sarkari Result shows a one-page summary of all the eligibility requirements including:</p>
+                      <ul>
+                    <li>Vacancy for 822 posts,</li>
+                      <li>Age limits from 21 to 32 years,</li>
+                     <li>Bachelor's degree education requirements.</li>
+                     <li>Important Dates</li>
+                     </ul>
+                      <p>Take note of the deadlines! This is especially important. After all, you don't want to miss out on the job of a lifetime because you missed the deadline.</p>
+
+                      <p> are several important dates to note:</p>
+                     <ul>
+                     <li>Application Start Date</li>
+                     <li>Last Date for Apply Online</li>
+                    <li>Last Date Pay Exam Fee</li>
+                      <li>Examination Date (or new date if postponed)</li>
+                     <li>Last Date to Change Exam District</li>
+                     <li>re Result Available</li></ul>
+                      <p><a href="https://www.sarkariresult.com/latestjob/" target="_blank"><u>Each job posting</u></a> on Sarkari Result shows this information in an easy-to-read chart, so you'll never miss a deadline!</p>
+
+
+                  <div class="boxes-header">Sarkari Result 2024 : SarkariResult.Com</div>
+                <div class="boxes-body">
+                 <p>India has witnessed a high demand for Government jobs for many decades. People prefer Government jobs as their career option considering the wide variety of benefits that are associated with these. ‘Sarkari Naukri’ is a dream for millions of people across the nation, and only a few are lucky to land up with such jobs. People tend to take pride in having a Sarkari or Government job.</p>
+                 <p>Government jobs hold the kind of authority not found in private jobs. These also offer job security for a lifetime, and hence a lot of youth prefer them. Getting into a Government job requires a person to go through multiple levels of tests. These include a written examination, interview and sometimes even physical examination. These are competitive exams, and millions of people appear for these exams to get into a coveted Government job.</p>   
+                </div>
+                <div class="boxes-header">How Competitive Is the Government Job Market?</div>
+                <div class="boxes-body">
+                    <p>There is no doubt that finding an Indian government job is highly competitive. The Times of India said it best when they said that the numbers are staggering:</p>
+                   <ul>
+                    <li style="margin-left: 3.2cm;">2.3 million applications for 368 peon positions in Uttar Pradesh.</li>
+                    <li style="margin-left: 3.6cm;">2.5 million applications for 6,000 positions in Bengal</li>
+                    <li style="margin-left: 2cm;">200,000 applications for 1,137 positions as police constables in Maharashtra.</li>
+                   </ul>   
+                   <p>When the Ministry of Railways started recruiting for around 63,000 positions, they received more than 19 million (1.9 crores) job applications.</p> 
+                   <p>With COVID-19, the competition has only increased because of the drop in the number of people hired by the government. The central government hired 119,000 people in 2021 which is a reduction in almost 32,000 jobs. There was a similar drop in 2021 of almost 107,000 people hired by the state government. This creates an extremely competitive environment. Getting up-to-date information on the latest jobs on Sarkari Result and understanding eligibility requirements can help you stand out from the crowd. These are of course some of the most coveted roles in India and are extremely competitive.</p>
+                </div>
+                <div class="boxes-header">Sarkari Exam for Government Jobs</div>
+                <div class="boxes-body"> 
+                    <p>Sarkari or Government exams are conducted for various positions in the state as well as central Government. There are various groups in <a href="https://www.sarkariresult.com/latestjob/" target="_blank"><b><u>Government jobs</u></b></a> and candidates can apply for either of these groups, depending on their qualifications. Group A mostly comprises of managerial roles and are considered to be the highest level of jobs. Group B is for Gazetted officers. To clear the Group B exam, one has to make the UPSC exam. Most seats under Group B are filled via promotions, so only limited seats are left for entrance via exam. Group C and D are for public servants who have non-supervisory roles.</p>
+                    </div> 
+                    <div class="boxes-header">Sarkari Exam for Government Jobs</div>
+                    <div class="boxes-body">
+                       <p> Sarkari or Government exams are conducted for various positions in the state as well as central Government. There are various groups in Government jobs and candidates can apply for either of these groups, depending on their qualifications. Group A mostly comprises of managerial roles and are considered to be the highest level of jobs. Group B is for Gazetted officers. To clear the Group B exam, one has to make the UPSC exam. Most seats under Group B are filled via promotions, so only limited seats are left for entrance via exam. Group C and D are for public servants who have non-supervisory roles.</p>
+                    </div>
+                    <div class="boxes-header">Sarkari Result 2023 - 2024</div>
+                    <div class="boxes-body">
+                        <p>All information about Sarkari result and Rojgar results can be found on sarkariresult.com. It is now easy to log into sarkariresult.com and find out everything that you would want to know about most of the Government exams and Sarkari Result.</p>
+                    </div>
+                    <div class="boxes-header">Sarkari Results for State Level Exams</div>
+                    <div class="boxes-body">
+                        <p>State Governments conduct various exams, and the Sarkari Result Info for all these exams can be found online. Sarkari Results in Bihar for all government job exams conducted by the state of Bihar. Similarly, Sarkari info for the Sarkari Result in Jharkhand can be searched online for all the exams conducted for the state of Jharkhand. UP Sarkari result is one of the most common online searches in India, considering the high demand for Government jobs in the state of U.P.</p>
+                    </div>
+                    <div class="boxes-header">Sarkari Naukri for Government Jobs</div>
+                    <div class="boxes-body">
+                        <p>Sarkariresult.com Sarkari Result is a platform where thousands of Sarkari Naukri online forms are available, as soon as a new Sarkari Naukri form comes out in Uttar Pradesh, Bihar, Madhya Pradesh, Delhi, Uttarakhand and other states. The information is available on Sarkari Result. Sarkari Naukri 10+2 Form, Sarkari Naukri Graduate Passed Jobs, Sarkari Naukri Post Graduate Jobs, Sarkari Naukri Medical Jobs, Sarkari Naukri in SSC, UPSC in Sarkari Naukri. And young people can see the information about Sarkari Naukri form organized by many other organizations with a single click on Sarkariresult.com.</p>
+                    </div>
+                    <div class="boxes-header">Sarkari Result - www sarkari result</div>
+                    <div class="boxes-body">
+                        <p>Sarkari Result Sarkariresult.com is a one-stop destination for all Sarkari Result queries on सरकारी रिजल्ट Sarkari results. It has a list of all the Government exams, Sarkari Result which can be seen as links. If one clicks on these exam names or links, the Sarkari Result website provides exhaustive information on that specific exam. This includes the timeline when the exam is conducted, admit card information, the number of seats offered, application forms, Sarkari result dates etc.</p>
+                    </div>
+            </div></div>
+            <div class="contain">
+                <div class="menu">
+                <div class="menu-header">
+                 Quick Links
+                </div>
+                <div class="menu-body">
+                    &nbsp;&nbsp; <section><a href="https://twitter.com/sarkari_result" target="_blank">Sarkari Result @Twitter</a></section>&nbsp;
+                    <section><a href="https://t.me/sarkari" target="_blank">Sarkari Result @Telegram</a></section>&nbsp;
+                    <section><a href="https://www.whatsapp.com/channel/0029Va5IElwBlHpVBd6i5a18" target="_blank">Sarkari Result @Whatsap</a></section>&nbsp;
+                    <section><a href="https://www.sarkariresult.com/#google_vignette" target="_blank">Sarkari Result @Instagram</a></section>&nbsp;
+                    <section><a href="https://www.kooapp.com/profile/sarkari_result" target="_blank">Sarkari Result @KOO</a></section>&nbsp;
+                    <section><a href="https://www.facebook.com/SarkariResult.ComOfficial/" target="_blank">Sarkari Result @Facebook</a></section>&nbsp;
+                    <section><a href="https://www.linkedin.com/company/sarkariresult-com/" target="_blank">Sarkari Result @Linkedin</a></section>&nbsp;
+                    <section><a href="https://www.youtube.com/c/SarkariResultOfficial" target="_blank">Sarkari Result @Youtube</a></section>&nbsp;
+                    <section><a href="https://www.sarkariresult.com/boardall/" target="_blank">All Board Exams</a></section>&nbsp;
+                    <section><a href="https://www.sarkariresult.com/contactus/" target="_blank">Sarkari Result Contact Us</a></section>&nbsp;
+                    <section><a href="https://www.sarkariresult.com/privacy-policy/" target="_blank">Privacy Policy</a></section>&nbsp;
+                </div>
+                </div>
+                <div class="contain">
+                    <div class="menu-b">
+                    <div class="menu-header">
+                     Apps
+                    </div>
+                    <div class="menu-body">
+                        &nbsp;&nbsp; <section><a href="https://play.google.com/store/apps/details?id=com.app.app14f269771c01" target="_blank">Android APP</a></section>&nbsp;
+                        <section><a href="https://apps.apple.com/us/app/sarkari-result/id1051363935?ls=1" target="_blank">Apple iOS APP </a></section>&nbsp;
+                    </div>
+                    </div>
+                 <div class="contain">
+                    <div class="menu-b">
+                    <div class="menu-header">
+                     More
+                    </div>
+                    <div class="menu-body">
+                        &nbsp;&nbsp; <section><a href="https://www.sarkariresult.com/bpsc/" target="_blank">BPSC</a></section>&nbsp;
+                        <section><a href="https://www.sarkariresult.com/up-scholarship/" target="_blank">UP-Scholarship</a></section>&nbsp;
+                        <section><a href="https://www.sarkariresult.com/upscall/" target="_blank">UPSC</a></section>&nbsp;
+                         <section><a href="https://www.sarkariresult.com/rpsc/" target="_blank">RPSC</a></section>&nbsp;
+                          <section><a href="https://www.sarkariresult.com/uppscall/" target="_blank">UPPCS</a></section>&nbsp;
+                        <section><a href="https://www.sarkariresult.com/coast-guard/" target="_blank">Coast Guard</a></section>&nbsp;
+                    </div>
+                 </div>   
+                  <div class="contain">
+                    <div class="menu-b">
+                    <div class="menu-header">
+                    </div>
+                    <div class="menu-body">
+                       &nbsp; &nbsp;&nbsp; <section><a href="https://www.sarkariresult.com/upsssc/" target="_blank">UPSSSC</a></section>&nbsp;
+                        <section><a href="https://www.sarkariresult.com/ibpsall/" target="_blank">IBPS</a></section>&nbsp;
+                        <section><a href="https://www.sarkariresult.com/ibpsall/" target="_blank">Air Forces</a></section>&nbsp;
+                         <section><a href="https://www.sarkariresult.com/delhi-dsssb/" target="_blank">Delhi DSSSB</a></section>&nbsp;
+                          <section><a href="https://www.sarkariresult.com/haryana-hssc/" target="_blank">HSSSC</a></section>&nbsp;
+                        <section><a href="https://www.sarkariresult.com/policeall/" target="_blank">Police Vacancy</a></section>&nbsp;
+                    </div>
+                 </div>   
+                 <div class="contain">
+                    <div class="menu-b">
+                    <div class="menu-header">
+                    </div>
+                    <div class="menu-body">
+                       &nbsp; &nbsp;&nbsp; <section><a href="https://www.sarkariresult.com/ccc-online/" target="_blank">CCC</a></section>&nbsp;
+                        <section><a href="https://www.sarkariresult.com/#google_vignette" target="_blank">SSC</a></section>&nbsp;
+                        <section><a href="https://www.sarkariresult.com/indian-navy/" target="_blank">Navy</a></section>&nbsp;
+                         <section><a href="https://www.sarkariresult.com/railwayall/" target="_blank">Railway</a></section>&nbsp;
+                          <section><a href="https://www.sarkariresult.com/tetall/" target="_blank">TET</a></section>&nbsp;
+                    </div>
+                 </div> 
+     </div>
+    </div>
+</body>
+</html>
+
